@@ -50,7 +50,7 @@
         .profile-banner {
             position: relative;
             height: 200px;
-            background-image: url('images/banner3.png'); /* Different banner image */
+            background-image: url('images/banner.png'); /* Different banner image */
             background-size: cover;
             background-position: center;
         }
@@ -176,6 +176,11 @@
             color: white;
         }
 
+        .profile-section .buttons .recommend:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
         .profile-section .buttons .reject {
             background-color: #dc3545;
             color: white;
@@ -190,18 +195,40 @@
     <!-- Header Navigation Bar -->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            <img src="images/logo.png" alt="Logo">
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search">
         </div>
         <div class="nav-icons">
-            <img src="images/user3.jpg" alt="User Profile" class="profile-icon">
+            <img src="images/recruiter.png" alt="User Profile" class="profile-icon">
         </div>
     </header>
 
     <!-- Profile Banner -->
     <div class="profile-banner"></div>
+
+    <!-- Candidate Actions -->
+    <div class="profile-section">
+        <div class="buttons">
+            <button type="button" class="recommend" id="previous-button" onclick="window.location.href='applicant2.html'">Previous Candidate</button>
+            <button type="button" class="recommend" id="next-button" disabled>Next Candidate</button>
+        </div>
+    </div>
+    
+    <!-- Feedback Section -->
+    <div class="profile-section">
+        <h2>Feedback</h2>
+        <form id="feedback-form">    
+            <label for="feedback">Candidate Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="Write your feedback here..." required></textarea>
+    
+            <div class="buttons">
+                <button type="button" class="recommend" id="recommend-button">Recommend</button>
+                <button type="button" class="reject" id="reject-button">Reject</button>
+            </div>
+        </form>
+    </div>
 
     <!-- Profile Information -->
     <div class="profile-container">
@@ -211,7 +238,7 @@
         <div class="profile-details">
             <h1>Daniel Foster</h1>
             <p>Graphic Designer at Creative Studio</p>
-            <p>Brisbane, Australia</p>
+            <p>Linkou, Taiwan</p>
         </div>
     </div>
 
@@ -280,7 +307,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Creative Studio. All rights reserved.</p>
+        <p>&copy; 2024 Headhunterz. All rights reserved.</p>
     </footer>
+<script src="feedback.js"></script>
 </body>
 </html>

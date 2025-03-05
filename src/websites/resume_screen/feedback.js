@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             feedback: feedbackText
         };
 
-        fetch('http://0.0.0.0:3000/saveFeedback', {
+        fetch('http://localhost:3000/saveFeedback', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             action
         };
 
-        fetch('http://0.0.0.0:3000/saveClickAction', {
+        fetch('http://localhost:3000/saveClickAction', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

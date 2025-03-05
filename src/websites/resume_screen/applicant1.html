@@ -50,7 +50,7 @@
         .profile-banner {
             position: relative;
             height: 200px;
-            background-image: url('images/banner1.png');
+            background-image: url('images/banner.png');
             background-size: cover;
             background-position: center;
         }
@@ -176,6 +176,11 @@
             color: white;
         }
 
+        .profile-section .buttons .recommend:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
         .profile-section .buttons .reject {
             background-color: #dc3545;
             color: white;
@@ -191,18 +196,40 @@
     <!-- Header Navigation Bar -->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            <img src="images/logo.png" alt="Logo">
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search">
         </div>
         <div class="nav-icons">
-            <img src="images/user1.jpg" alt="User Profile" class="profile-icon">
+            <img src="images/recruiter.png" alt="User Profile" class="profile-icon">
         </div>
     </header>
 
     <!-- Profile Banner -->
     <div class="profile-banner"></div>
+
+    <!-- Candidate Actions -->
+    <div class="profile-section">
+        <div class="buttons">
+            <button type="button" class="recommend" id="previous-button" disabled>Previous Candidate</button>
+            <button type="button" class="recommend" id="next-button" onclick="window.location.href='applicant2.html'">Next Candidate</button>
+        </div>
+    </div>
+
+    <!-- Feedback Section -->
+    <div class="profile-section">
+        <h2>Feedback</h2>
+        <form id="feedback-form">    
+            <label for="feedback">Candidate Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="Write your feedback here..." required></textarea>
+    
+            <div class="buttons">
+                <button type="button" class="recommend" id="recommend-button">Recommend</button>
+                <button type="button" class="reject" id="reject-button">Reject</button>
+            </div>
+        </form>
+    </div>
 
     <!-- Profile Information -->
     <div class="profile-container">
@@ -211,8 +238,8 @@
         </div>
         <div class="profile-details">
             <h1>Ava Thompson</h1>
-            <p>Software Engineer at Figma</p>
-            <p>Atlanta, Georgia, USA</p>
+            <p>Software Engineer at Mercor</p>
+            <p>Austin, Texas</p>
         </div>
     </div>
 
@@ -228,7 +255,7 @@
     <ul>
         <li>
             <h3>Senior Software Engineer</h3>
-            <p><strong>Figma</strong> | Jan 2020 - Present</p>
+            <p><strong>Mercor</strong> | Jan 2020 - Present</p>
             <p>As a Senior Software Engineer, I lead a team of developers in designing and implementing scalable web applications using a variety of modern technologies, including React, Node.js, and AWS. My role involves:</p>
             <ul>
                 <li>Architecting complex backend solutions using microservices to enhance application scalability and performance.</li>
@@ -240,7 +267,7 @@
         </li>
         <li>
             <h3>Software Engineer</h3>
-            <p><strong>Adobe</strong> | Jun 2017 - Dec 2019</p>
+            <p><strong>Another Tech Company</strong> | Jun 2017 - Dec 2019</p>
             <p>In my role as a Software Engineer, I was responsible for developing full-stack solutions for e-commerce platforms, which included:</p>
             <ul>
                 <li>Developing responsive front-end interfaces using Angular and Bootstrap, enhancing user experience across devices.</li>
@@ -260,7 +287,7 @@
     <ul>
         <li>
             <h3>Master of Science in Computer Science</h3>
-            <p><strong>University of Alberta</strong> | 2015 - 2017</p>
+            <p><strong>University Name</strong> | 2015 - 2017</p>
             <p>Focused on advanced topics in computer science, including algorithms, distributed systems, and machine learning. Key projects and coursework included:</p>
             <ul>
                 <li><strong>Thesis:</strong> Developed a predictive model for real-time stock market analysis using machine learning techniques, achieving a 10% improvement in prediction accuracy over traditional methods.</li>
@@ -271,7 +298,7 @@
         </li>
         <li>
             <h3>Bachelor of Science in Software Engineering</h3>
-            <p><strong>Stanford University</strong> | 2011 - 2015</p>
+            <p><strong>University Name</strong> | 2011 - 2015</p>
             <p>Studied fundamental and advanced software engineering principles, with a strong emphasis on practical application through capstone projects and internships. Highlights include:</p>
             <ul>
                 <li><strong>Capstone Project:</strong> Designed and developed a mobile application for campus navigation and resource management, which was later adopted by the university for student use.</li>
@@ -284,7 +311,8 @@
 </div>
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Tech Company. All rights reserved.</p>
+        <p>&copy; 2024 Headhunterz. All rights reserved.</p>
     </footer>
+<script src="feedback.js"></script>
 </body>
 </html>
